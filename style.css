@@ -2,12 +2,22 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+:root {
+    --background: #1b2129;
+    --principal: #4990E0;
+    --hover: #5C82AD;  
+}
+
 * {
     padding: 0;
     margin: 0;
     outline: none;
     border: none;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 img {
@@ -21,8 +31,10 @@ a {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #18181b;
+    background-color: var(--background);
 }
+
+/* Navegação */
 
 nav {
     max-width: 1200px;
@@ -58,7 +70,7 @@ nav {
     width: 0;
     bottom: 0;
     left: 0;
-    background-color: #1d4ed8;
+    background-color: var(--principal);
     transition: all 0.3s ease;
 }
 
@@ -69,16 +81,19 @@ nav {
 .btn {
     padding:  1rem 2rem;
     font-size: 1rem;
+    font-weight: 600;
     color: #fff;
-    background-color: #1d4ed8;
+    background-color: var(--principal);
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #1e30af;
+    background-color: var(--hover);
 }
+
+/* Header */
 
 .container {
     max-width: 1200px;
@@ -88,7 +103,7 @@ nav {
 
 .blur {
     position: absolute;
-    box-shadow: 0 0 1000px 50px #1d4ed8;
+    box-shadow: 0 0 1000px 50px var(--principal);
     z-index: -100;
 }
 
@@ -139,7 +154,7 @@ header .image::before {
     font-size: 38rem;
     font-weight: 400;
     line-height: 20rem;
-    color: #1d4ed8;
+    color: var(--hover);
     opacity: 0.2;
     z-index: -100;
 }
@@ -148,6 +163,8 @@ header .image img {
     max-width: 600px;
     margin: auto;
 }
+
+/* Recursos */
 
 section .header {
     margin-bottom: 1rem;
@@ -179,7 +196,7 @@ section .header {
 
 .features .card span{
     display: inline-block;
-    background-color: #1e30af;
+    background-color: var(--hover);
     padding: 2px 9px;
     margin-bottom: 1rem;
     font-size: 1.75rem;
@@ -205,8 +222,10 @@ section .header {
 }
 
 .features .card a:hover {
-    color: #1e30af;
+    color: var(--hover);
 }
+
+/* Planos */
 
 .sub-header {
     max-width: 600px;
@@ -276,8 +295,8 @@ section .header {
 }
 
 .pricing .card button:hover{
-    background-color: #1d4ed8;
-    border-color: #1e30af;
+    background-color: var(--principal);
+    border-color: var(--hover);
 }
 
 /* Estilos do Footer */
@@ -316,8 +335,8 @@ footer .column .socials a {
 
 footer .column .socials a:hover{
     color: #fff;
-    background-color: #1d4ed8;
-    border-color: #1d4ed8;
+    background-color: var(--principal);
+    border-color: var(--hover);
 }
 
 footer .column h4 {
@@ -335,7 +354,7 @@ footer .column > a {
 }
 
 footer .column > a:hover {
-    color: #1d4ed8;
+    color: var(--hover);
 }
 
 .copyright {
